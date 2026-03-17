@@ -1,12 +1,13 @@
+import os
 from dotenv import load_dotenv
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_chroma import Chroma
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
+import streamlit as st
 
 load_dotenv()
 
-embeddings = OpenAIEmbeddings()
+# Works locally via .env AND on Streamlit Cloud via secrets
+openai_api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+
+embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
 vectorstore = Chroma(
     persist_directory="./chroma_db",
