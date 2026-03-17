@@ -3,7 +3,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
-from langchain.chains import RetrievalQA
+from langchain_community.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
 load_dotenv()
