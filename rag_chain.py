@@ -36,6 +36,7 @@ PROMPT = PromptTemplate(
 llm = ChatOpenAI(
     model_name="gpt-4o-mini",
     temperature=0
+    openai_api_key=openai_api_key
 )
 
 qa_chain = RetrievalQA.from_chain_type(
