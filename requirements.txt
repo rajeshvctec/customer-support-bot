@@ -1,10 +1,11 @@
 streamlit
 python-dotenv
-langchain==0.1.20
-langchain-openai==0.1.8
-langchain-chroma==0.1.2
-langchain-community==0.0.38
-chromadb==0.5.0
-openai==1.30.0
+langchain
+langchain-openai
+langchain-chroma
+langchain-community
+langchain-core
+chromadb
+openai
 tiktoken
 pypdf
